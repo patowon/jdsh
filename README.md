@@ -1,4 +1,6 @@
-# 🌐 JDSH - JDownloader Shell
+# 🟠 JDSH - JDownloader Shell 🔵
+
+![preview](.github/preview-v1.0.1.webp)
 
 Control and Manage your JDownloader within your terminal with _ease_.
 
